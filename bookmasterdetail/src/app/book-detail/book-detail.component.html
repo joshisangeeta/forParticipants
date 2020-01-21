@@ -1,0 +1,17 @@
+<p>book-detail works!</p>
+
+<div *ngIf="book">
+    <h2>{{ book.title}}</h2>
+</div>
+
+<div>
+    <label>Author:</label>
+    <h3>{{ book.author }}</h3>
+</div>
+<div>
+    <label>Price</label>
+    <h3>{{ book.price }}</h3>
+
+</div>
+
+<button (click) = 'goBack()' > Back </button>

@@ -1,0 +1,24 @@
+<p>
+  book-master works!
+</p>
+<div>Book Store</div>
+<h2>List of Books</h2>
+    
+<table >
+  <thead>
+  <th>Book ID </th>
+  <th>Book Title</th>
+ 
+  </thead>
+  <tbody>
+  
+    <tr  *ngFor='let book of books' (click)='selectBook(book)'>
+       <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        
+     </tr>
+  
+  </tbody>
+</table>
+
+<app-book-detail [mybook]='selectedBook'></app-book-detail>

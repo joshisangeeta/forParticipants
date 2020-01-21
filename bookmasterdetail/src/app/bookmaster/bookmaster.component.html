@@ -1,0 +1,15 @@
+<p>bookmaster works!</p>
+
+<table>
+    <thead>
+       <th>Book ID</th>
+       <th>Book Title</th>
+    </thead>
+    <tbody>
+       <tr *ngFor='let book of books' [routerLink]="['/detail',book.id]" >
+           <td >{{book.id}}</td>
+           <td>{{book.title}}</td>
+
+       </tr>
+    </tbody>
+</table>
