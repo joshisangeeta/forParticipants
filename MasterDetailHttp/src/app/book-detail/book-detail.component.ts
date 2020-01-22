@@ -16,6 +16,7 @@ private sub:any;
     private route:ActivatedRoute,
     private location:Location) { }
 
+    
   ngOnInit() {
 
     this.sub= this.route.params.subscribe(params=>{
