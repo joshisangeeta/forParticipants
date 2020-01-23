@@ -1,1 +1,7 @@
 <p>parent-localv works!</p>
+
+<h3>Countdown to Liftoff (via local variable)</h3>
+<button (click)="timer.start()" >Strart</button>
+<button (click) = "timer.stop()">Stop</button>
+<div class="seconds" >{{ timer.seconds}}</div>
+<countdown-timer #timer></countdown-timer>
