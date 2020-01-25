@@ -13,10 +13,10 @@ export class HomeComponent  {
 
   constructor(private messageService : MessageService) { };
 
-  sendMessage():{this.messageService.sendMessage("Message from Home comp to App Comp");}
+  sendMessage():void {this.messageService.sendMessage("Message from Home comp to App Comp");}
   
-  clearMessage():{
-    this.clearService.clearMessage();
+  clearMessage():void {
+    this.messageService.clearMessage();
   }
   
   
