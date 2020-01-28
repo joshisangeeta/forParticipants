@@ -7,10 +7,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
-  }
-
+ 
   constructor(private messageService : MessageService) { };
 
   sendMessage():void {this.messageService.sendMessage("Message from Home comp to App Comp");}

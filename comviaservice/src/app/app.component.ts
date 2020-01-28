@@ -12,8 +12,11 @@ export class AppComponent {
   subscription : Subscription;
 
   constructor(private messageService : MessageService){
+    this.message='abc';
     this.subscription = this.messageService.getMessage().subscribe(message=>{this.message})
   }
+ 
+
 
  ngOnDestroy(){
    this.subscription.unsubscribe();
