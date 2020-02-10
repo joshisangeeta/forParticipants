@@ -16,6 +16,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.booksService.getBooks().subscribe(books=>this.books=books);
     }
+
+
+
+
+    
    getAllBooks(){
      this.booksService.getBooks().subscribe(books=>this.books=books);
    } 

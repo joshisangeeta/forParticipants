@@ -1,0 +1,74 @@
+<p>
+  add-car works!
+</p>
+<h1 class="pageheader">Add Project Form</h1>
+
+<form  #myForm='ngForm' (ngSubmit)='myForm.valid && submitCar()'>
+  
+<div class="form-group col-md-4">
+  <label>Car Model*</label>
+  <input type="text" class="form-control"  id="carmodel" name="carmodel"  minlength="2" maxlength="20" placeholder="Enter Car Model"  [(ngModel)]='car.model'  required #model="ngModel">
+<div  style="color:red" *ngIf="carmodel.errors && myForm.submitted">
+<p [hidden]="!carmodel.errors.required">
+Car Model is required!
+ </p>
+ <p [hidden]="!carmodel.errors.pattern">
+Only Alphabets Allowed 
+ </p>
+</div>
+</div>
+
+<div class="form-group col-md-4">
+  <label>YearsOfUse*</label>
+  <input type="number" class="form-control" id="years" name="years"  placeholder="Enter Years of use"  [(ngModel)]='car.yearsOfUse' required #yearsOfUse="ngModel">
+<div style="color:red" *ngIf="years.errors && myForm.submitted">
+  <p [hidden]="!years.errors.required">
+ Years of use is required  
+ </p>
+  <p [hidden]="!years.errors.pattern">
+Only Alphabets Allowed 
+ </p>
+    </div>
+   
+</div>
+   
+ 
+ 
+<div class="form-group col-md-4">
+  <label>Domain*</label>
+  <select class="form-control" id="color" name="color"  [(ngModel)]='car.color' #color="ngModel" required>
+    <option value="Blue">Blue</option>
+     <option value="Black">Black</option>
+      <option value="White">White</option>
+      <option value="Red">Red</option>
+  </select>
+  <div style="color:red" *ngIf="color.errors && myForm.submitted">
+  <p [hidden]="!color.errors.required">
+The color needs to be selected  
+ </p>
+        
+    </div>
+</div>
+
+
+<div class="form-group col-md-4">
+  <label>Price*</label>
+  <input type="text" class="form-control" id="price" name="price"   minlength="0" maxlength="10"   placeholder="Enter Price" [(ngModel)]='car.price' required #price="ngModel">
+
+<div style="color:red" *ngIf="price.errors && myForm.submitted">
+  <p [hidden]="!price.errors.required">
+The Price is Required 
+ </p>
+ <p [hidden]="!price.errors.pattern">
+Only Numbers Allowed 
+ </p>
+    </div>
+
+</div>
+ 
+<div class="form-group ">
+ <button type="submit" class="btn btn-success center-block">Submit</button>
+</div>
+
+
+</form>
